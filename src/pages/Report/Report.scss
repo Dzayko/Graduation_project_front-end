@@ -1,0 +1,65 @@
+.report {
+  padding: 85px 17px 0px 17px;
+  position: relative;
+  top: 0;
+  left: 0;
+  flex: 1 1 auto;
+  background-color: rgb(22, 22, 37);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    transform: translateY(-15%);
+  }
+
+  &__title {
+    color: rgba(69, 162, 158, 0.8);
+    font-size: 2rem;
+    margin-bottom: 0.3em; //11px
+    text-align: center;
+  }
+
+  &__report-object {
+    color: rgb(197, 198, 199);
+    font-size: 0.875rem; //14px
+    text-align: center;
+    line-height: 1.5em; //21px
+    margin-bottom: 1em; //14px
+    padding: 0 1.43em; //20px
+    max-width: 52em; //630px
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  &__explanatory-text {
+    color: #c5c6c7;
+    font-size: 0.875rem; //14px
+    text-align: center;
+    padding: 0 1.43em; //20px
+    max-width: 45em; //630px
+    margin: 0 auto;
+    line-height: 21px;
+    span {
+      text-decoration: underline;
+      text-underline-offset: 0.3em;
+    }
+  }
+
+  &_back-arrow-icon {
+    position: absolute;
+    top: 30px;
+    left: 17px;
+    transition: 0.5s;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+    &:active {
+      transform: scale(0.9);
+      transition: 0.02s;
+    }
+  }
+}
